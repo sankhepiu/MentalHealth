@@ -15,4 +15,4 @@ app.post("/submit", (req, res) => {
   res.json({ result });
 });
 
-app.listen(3000, () => console.log("Server running"));
+app.listen(3000, () => console.log("Server running on port 3000"));
