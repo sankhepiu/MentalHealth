@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X, Heart, MessageCircleHeart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -35,6 +35,18 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+
+          {/* AI Chat link */}
+          <Link
+            to="/chatbot"
+            className={`flex items-center gap-1.5 text-sm font-medium transition-colors hover:text-primary ${
+              location.pathname === "/chatbot" ? "text-primary" : "text-muted-foreground"
+            }`}
+          >
+            <MessageCircleHeart className="h-4 w-4" />
+            AI Chat
+          </Link>
+
           <Link to="/questionnaire">
             <Button size="sm">Take Assessment</Button>
           </Link>
@@ -59,6 +71,19 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+
+          {/* AI Chat mobile link */}
+          <Link
+            to="/chatbot"
+            onClick={() => setIsOpen(false)}
+            className={`flex items-center gap-1.5 text-sm font-medium py-2 transition-colors hover:text-primary ${
+              location.pathname === "/chatbot" ? "text-primary" : "text-muted-foreground"
+            }`}
+          >
+            <MessageCircleHeart className="h-4 w-4" />
+            AI Chat
+          </Link>
+
           <Link to="/questionnaire" onClick={() => setIsOpen(false)}>
             <Button size="sm" className="w-full">Take Assessment</Button>
           </Link>

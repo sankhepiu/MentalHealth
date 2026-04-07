@@ -9,6 +9,8 @@ import Services from "./pages/Services.tsx";
 import Questionnaire from "./pages/Questionnaire.tsx";
 import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import Chat from "./pages/chat.tsx";
+import ChatBot from "./pages/chatbot.tsx";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +26,8 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/questionnaire" element={<Questionnaire />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/chat" element={<Chat />} />
+          <Route path="/chatbot" element={<ChatBot />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
