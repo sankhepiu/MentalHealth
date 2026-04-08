@@ -78,7 +78,7 @@ Use this context to personalise your responses. Don't repeat these numbers unles
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3000/api/chat", {
+      const response = await fetch("http://piu-mindwell-env.eba-ach9mijn.us-east-1.elasticbeanstalk.com/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
