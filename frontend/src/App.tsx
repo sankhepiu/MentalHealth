@@ -3,14 +3,17 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Index from "./pages/Index.tsx";
-import About from "./pages/About.tsx";
-import Services from "./pages/Services.tsx";
-import Questionnaire from "./pages/Questionnaire.tsx";
-import Contact from "./pages/Contact.tsx";
-import NotFound from "./pages/NotFound.tsx";
-import Chat from "./pages/chat.tsx";
-import ChatBot from "./pages/chatbot.tsx";
+
+import Index from "./pages/Index";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Questionnaire from "./pages/Questionnaire";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
+
+// Pages
+import ChatBot from "./pages/chatbot";
+import LivingGarden from "./pages/LivingGarden";
 
 const queryClient = new QueryClient();
 
@@ -19,15 +22,21 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+
       <BrowserRouter>
         <Routes>
+          {/* Main pages */}
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/questionnaire" element={<Questionnaire />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/chat" element={<Chat />} />
+
+          {/* Features */}
           <Route path="/chatbot" element={<ChatBot />} />
+          <Route path="/garden" element={<LivingGarden />} />
+
+          {/* 404 (always last) */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

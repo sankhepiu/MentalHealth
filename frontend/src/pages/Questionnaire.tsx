@@ -163,7 +163,7 @@ const Questionnaire = () => {
   };
 
   const handleTalkToCompanion = () => {
-    navigate("/chat", {
+    navigate("/chatbot", {
       state: {
         depression: depressionScore, anxiety: anxietyScore, stress: stressScore,
         depLabel: depSev.label, anxLabel: anxSev.label, strLabel: strSev.label,
