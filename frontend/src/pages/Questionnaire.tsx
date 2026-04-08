@@ -99,6 +99,8 @@ const GaugeBar = ({ score, max, color }: { score: number; max: number; color: st
   );
 };
 
+const API_URL = "https://d1otxgia1oi4us.cloudfront.net";
+
 // ── Main component ────────────────────────────────────────────────────────────
 const Questionnaire = () => {
   const navigate = useNavigate();
@@ -135,7 +137,8 @@ const Questionnaire = () => {
       setCurrent(current + 1);
     } else {
       try {
-        const response = await fetch("http://localhost:3000/submit", {
+        const API_URL = "https://d1otxgia1oi4us.cloudfront.net";
+        const response = await fetch(`${API_URL}/submit`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ depression: depressionScore, anxiety: anxietyScore, stress: stressScore }),
