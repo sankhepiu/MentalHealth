@@ -5,7 +5,6 @@ MindWell is a full-stack mental health web application designed to help users as
 
 The platform combines a scientifically backed questionnaire (DASS-21) with a conversational AI chatbot to provide users with insights, guidance, and a safe space to express their thoughts.
 
----
 
 ## 🌟 Features
 
@@ -29,7 +28,6 @@ The platform combines a scientifically backed questionnaire (DASS-21) with a con
   * Clean chat interface
   * Responsive design
 
----
 
 ## 🛠️ Tech Stack
 
@@ -54,7 +52,6 @@ The platform combines a scientifically backed questionnaire (DASS-21) with a con
 * AWS CloudFront
 * AWS Elastic Beanstalk
 
----
 
 ## ☁️ AWS Services Used & Benefits
 
@@ -69,7 +66,6 @@ The platform combines a scientifically backed questionnaire (DASS-21) with a con
 * Cost-effective hosting solution
 * High availability
 
----
 
 ### 2. AWS CloudFront
 
@@ -82,7 +78,6 @@ The platform combines a scientifically backed questionnaire (DASS-21) with a con
 * Reduced latency for users worldwide
 * Improved performance of API calls
 
----
 
 ### 3. AWS Elastic Beanstalk
 
@@ -95,7 +90,6 @@ The platform combines a scientifically backed questionnaire (DASS-21) with a con
 * Handles server configuration automatically
 * Integrated with other AWS services
 
----
 
 ## ⚙️ How It Works
 
@@ -109,7 +103,6 @@ The platform combines a scientifically backed questionnaire (DASS-21) with a con
 4. User can interact with AI chatbot
 5. Chatbot provides supportive responses using Groq API
 
----
 
 ## 🚀 Deployment Architecture
 
@@ -117,7 +110,6 @@ Frontend (React) → AWS S3 → CloudFront
 Backend (Node.js) → Elastic Beanstalk → CloudFront
 AI → Groq API
 
----
 
 ## 📦 Installation (Local Setup)
 
@@ -153,7 +145,6 @@ node server.js
 npm run dev
 ```
 
----
 
 ## 📌 Future Enhancements
 
@@ -163,16 +154,14 @@ npm run dev
 * 🌙 Dark mode UI
 * 📱 Mobile optimization
 
----
 
 ## ⚠️ Disclaimer
 
 This application is intended for educational and informational purposes only.
 It is **not a substitute for professional medical advice, diagnosis, or treatment**.
 
----
 
 ## 👨‍💻 Author
 
-Developed by Piu 💚
+Developed by Piu (Pruthvi Sankhe) 💚
 
