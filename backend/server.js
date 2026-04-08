@@ -8,15 +8,20 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// ✅ AWS PORT FIX
+const PORT = process.env.PORT || 3000;
+
 // ✅ Groq setup
 const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY,
 });
 
-// ✅ Debug: check if key is loading
-console.log("KEY:", process.env.GROQ_API_KEY);
+// ✅ Health check route (VERY IMPORTANT)
+app.get("/", (req, res) => {
+  res.send("MindWell backend is running 🚀");
+});
 
-// ✅ Questionnaire scoring route
+// ✅ Questionnaire route
 app.post("/submit", (req, res) => {
   const { depression, anxiety, stress } = req.body;
 
@@ -29,13 +34,12 @@ app.post("/submit", (req, res) => {
   if (avg <= 2) result = "Low";
   else if (avg <= 5) result = "Moderate";
   else result = "High";
-
-  console.log("Scores:", { depression, anxiety, stress, avg, result });
+  
 
   res.json({ result });
 });
 
-// ✅ AI Companion chat route
+// ✅ Chat route
 app.post("/api/chat", async (req, res) => {
   const { messages, systemPrompt } = req.body;
 
@@ -51,7 +55,7 @@ app.post("/api/chat", async (req, res) => {
           role: "system",
           content:
             systemPrompt ||
-            "You are a compassionate mental health companion. Be warm, empathetic, and supportive. Do not give medical diagnosis. Encourage healthy coping.",
+            "You are a compassionate mental health companion. Be warm, empathetic and supportive.",
         },
         ...messages,
       ],
@@ -65,8 +69,7 @@ app.post("/api/chat", async (req, res) => {
 
     res.json({ reply });
   } catch (error) {
-    // 🔥 IMPORTANT: full error debug
-    console.error("FULL ERROR:", error);
+    console.error("ERROR:", error);
 
     res.status(500).json({
       error: "Failed to get AI response",
@@ -75,7 +78,7 @@ app.post("/api/chat", async (req, res) => {
   }
 });
 
-// ✅ Start server
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
+// ✅ START SERVER (FIXED)
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
