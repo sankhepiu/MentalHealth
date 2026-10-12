@@ -1,35 +1,35 @@
 # MentalHealth
-# MindWell 🧠💚
+# MindWell 
 
 MindWell is a full-stack mental health web application designed to help users assess their emotional well-being and interact with an AI-powered companion for support.
 
 The platform combines a scientifically backed questionnaire (DASS-21) with a conversational AI chatbot to provide users with insights, guidance, and a safe space to express their thoughts.
 
 
-## 🌟 Features
+##  Features
 
-* 🧠 **Mental Health Assessment (DASS-21)**
+*  **Mental Health Assessment (DASS-21)**
 
   * Evaluates Depression, Anxiety, and Stress levels
   * Provides severity classification and recommendations
 
-* 💬 **AI Chatbot (Groq LLM)**
+*  **AI Chatbot (Groq LLM)**
 
   * Real-time conversational support
   * Context-aware responses based on user assessment
 
-* 📊 **Results Dashboard**
+*  **Results Dashboard**
 
   * Visual representation of scores
   * Personalized suggestions
 
-* 🎨 **Modern UI**
+*  **Modern UI**
 
   * Clean chat interface
   * Responsive design
 
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 
@@ -53,7 +53,7 @@ The platform combines a scientifically backed questionnaire (DASS-21) with a con
 * AWS Elastic Beanstalk
 
 
-## ☁️ AWS Services Used & Benefits
+##  AWS Services Used & Benefits
 
 ### 1. AWS S3 (Simple Storage Service)
 
@@ -91,7 +91,7 @@ The platform combines a scientifically backed questionnaire (DASS-21) with a con
 * Integrated with other AWS services
 
 
-## ⚙️ How It Works
+##  How It Works
 
 1. User completes the DASS-21 questionnaire
 2. Scores are calculated for:
@@ -104,14 +104,14 @@ The platform combines a scientifically backed questionnaire (DASS-21) with a con
 5. Chatbot provides supportive responses using Groq API
 
 
-## 🚀 Deployment Architecture
+##  Deployment Architecture
 
 Frontend (React) → AWS S3 → CloudFront
 Backend (Node.js) → Elastic Beanstalk → CloudFront
 AI → Groq API
 
 
-## 📦 Installation (Local Setup)
+##  Installation (Local Setup)
 
 ### 1. Clone the repo
 
@@ -146,22 +146,22 @@ npm run dev
 ```
 
 
-## 📌 Future Enhancements
+##  Future Enhancements
 
-* 📈 Mood Tracker with graphs
-* 🔐 User authentication system
-* 💾 Chat history storage
-* 🌙 Dark mode UI
-* 📱 Mobile optimization
+*  Mood Tracker with graphs
+*  User authentication system
+*  Chat history storage
+*  Dark mode UI
+*  Mobile optimization
 
 
-## ⚠️ Disclaimer
+##  Disclaimer
 
 This application is intended for educational and informational purposes only.
 It is **not a substitute for professional medical advice, diagnosis, or treatment**.
 
 
-## 👨‍💻 Author
+##  Author
 
-Developed by Piu (Pruthvi Sankhe) 💚
+Developed by Piu (Pruthvi Sankhe) 
 
